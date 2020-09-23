@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 public class BeanConfiguration {
 
     @Bean
-    @LoadBalanced// 自动构造LoadBalancedClient接口的实现类并注册到Spring容器中
+    //@LoadBalanced// 自动构造LoadBalancedClient接口的实现类并注册到Spring容器中
     public RestTemplate getRestTemplate() {
         return new RestTemplate();
     }
