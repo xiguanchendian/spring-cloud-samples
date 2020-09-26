@@ -5,7 +5,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>spring-cloud-base</module>
-        <module>spring-cloud-eureka-server</module>
+        <module>spring-cloud-eureka-server1</module>
         <module>spring-cloud-eureka-service1</module>
         <module>spring-cloud-eureka-substitution1</module>
         <module>spring-cloud-ribbon</module>
@@ -56,6 +56,10 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
     </dependencies>
 
