@@ -6,4 +6,18 @@ server:
 eureka:
   client:
     service-url:
+      #添加security用户名密码xgcd:123456@
       defaultZone: http://xgcd:123456@localhost:8761/eureka
+  #自定义instatnce_id
+  instance:
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instatnce_id:${server.port}}
+    #使用ip进行注册,跳转链接形如http://192.168.8.159:8082/actuator/info
+    prefer-ip-address: true
+    #配合server端,配置client清理间隔 更多Instance配置可查看org.springframework.cloud.netflix.eureka.EurekaInstanceConfigBean
+    #默认30秒 发送给server端的心跳频率
+    lease-renewal-interval-in-seconds: 5
+    #默认90秒 心跳等待超时时间,如果Eureka Server收到上一次心跳后,在此期间没有收到下一次心跳则移除该instance
+    lease-expiration-duration-in-seconds: 5
+    #自定义元数据(自定义配置)
+    metadata-map:
+      site-name: xgcd
