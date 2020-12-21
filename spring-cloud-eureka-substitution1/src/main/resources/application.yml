@@ -6,7 +6,7 @@ server:
 eureka:
   client:
     service-url:
-      #添加security用户名密码xgcd:123456@
+      #添加security用户名密码xgcd:123456
       defaultZone: http://xgcd:123456@localhost:8761/eureka
   #自定义instatnce_id
   instance:
