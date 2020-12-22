@@ -3,13 +3,18 @@ spring:
     name: eureka-substitution1
 server:
   port: 8082
+  servlet:
+    context-path: /sub
 eureka:
   client:
     service-url:
       #添加security用户名密码xgcd:123456
       defaultZone: http://xgcd:123456@localhost:8761/eureka
+    healthcheck:
+      enabled: true
   #自定义instatnce_id
   instance:
+    #主机名：服务名称：服务端口 或者 服务名称：服务所在IP：服务端口
     instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instatnce_id:${server.port}}
     #使用ip进行注册,跳转链接形如http://192.168.8.159:8082/actuator/info
     prefer-ip-address: true
@@ -21,3 +26,6 @@ eureka:
     #自定义元数据(自定义配置)
     metadata-map:
       site-name: xgcd
+    #自定义实例跳转链接
+    #status-page-url: http://xiguanchendian.com
+    health-check-url-path: ${server.servlet.context-path}/health
