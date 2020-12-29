@@ -9,6 +9,7 @@
         <module>spring-cloud-eureka-service1</module>
         <module>spring-cloud-eureka-substitution1</module>
         <module>spring-cloud-ribbon</module>
+        <module>spring-cloud-common</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

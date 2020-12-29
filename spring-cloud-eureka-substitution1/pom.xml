@@ -12,6 +12,11 @@
     <artifactId>spring-cloud-eureka-substitution1</artifactId>
 
     <dependencies>
+        <dependency>
+            <groupId>com.xgcd</groupId>
+            <artifactId>spring-cloud-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

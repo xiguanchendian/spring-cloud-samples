@@ -9,15 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-cloud-ribbon</artifactId>
-    <dependencies>
-        <!-- https://mvnrepository.com/artifact/com.netflix.ribbon/ribbon -->
-        <dependency>
-            <groupId>com.netflix.ribbon</groupId>
-            <artifactId>ribbon</artifactId>
-            <version>2.7.18</version>
-            <scope>runtime</scope>
-        </dependency>
-    </dependencies>
+    <artifactId>spring-cloud-common</artifactId>
+
 
 </project>
