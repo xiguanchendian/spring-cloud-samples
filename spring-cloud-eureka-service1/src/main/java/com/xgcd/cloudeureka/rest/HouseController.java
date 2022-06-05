@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 public class HouseController {
     @GetMapping("/data")
     public HouseInfo getData(@RequestParam("name") String name) {
-        return new HouseInfo(2L, "北京", "海淀", "花虎沟");
+        return new HouseInfo(2L, "北京", "朝阳", "花虎沟");
     }
 
     @GetMapping("/data/{name}")
