@@ -23,8 +23,8 @@ public class Substitution1Controller {
 
     @GetMapping("/callHello")
     public String callHello() {
-//        return restTemplate.getForObject("http://localhost:8081/service1/hello", String.class);
-        return restTemplate.getForObject("http://eureka-service1/service1/hello", String.class);// BeanConfiguration添加@LoadBalanced注解,此处需要修改为服务提供者名称
+        // BeanConfiguration添加@LoadBalanced注解,此处需要修改为服务提供者名称
+        return restTemplate.getForObject("http://eureka-service1/service1/hello", String.class);
     }
 
     @GetMapping("/infos")
